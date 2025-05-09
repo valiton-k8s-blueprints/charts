@@ -1,0 +1,5 @@
+apiVersion: v2
+name: Openstack Credentials via External Secrets
+description: External Secrets with ClusterSecretStore for Openstack Credentials
+type: application
+version: 0.1.0
