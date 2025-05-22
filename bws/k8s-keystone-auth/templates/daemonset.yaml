@@ -27,12 +27,15 @@ spec:
             - {{.Values.authUrl}}/v3
             - --v
             - "100"
+            - --listen
+            - 127.0.0.1:8443
           volumeMounts:
             - mountPath: /etc/pki
               name: tls-secret
               readOnly: true
           ports:
             - containerPort: 8443
+              hostPort: 8443
       hostNetwork: true
       volumes:
         - name: tls-secret
