@@ -1,9 +1,9 @@
-{{ if .Values.certManagerDns01Designate.enabled }}
+{{ if .Values.certManagerDesignateWebhook.enabled }}
 ---
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: {{ .Values.certManagerDns01Designate.namespace }}
+  name: {{ .Values.certManagerDesignateWebhook.namespace }}
   labels:
     {{- range $k, $v := .Values.clusterSecretStore.namespaces.matchLabels }}
       {{ $k }}: "{{ $v }}"
@@ -12,19 +12,19 @@ metadata:
 apiVersion: external-secrets.io/v1beta1
 kind: ExternalSecret
 metadata:
-  name: {{ .Values.certManagerDns01Designate.secretName }}
-  namespace: {{ .Values.certManagerDns01Designate.namespace }}
+  name: {{ .Values.certManagerDesignateWebhook.secretName }}
+  namespace: {{ .Values.certManagerDesignateWebhook.namespace }}
 spec:
   refreshInterval: 1h
   secretStoreRef:
     kind: ClusterSecretStore
     name: {{ .Values.clusterSecretStore.name }}
   target:
-    name: {{ .Values.certManagerDns01Designate.secretName }}
+    name: {{ .Values.certManagerDesignateWebhook.secretName }}
     template:
       engineVersion: v2
       data:
-        OS_AUTH_URL: "{{ .Values.certManagerDns01Designate.authUrl }}/v3"
+        OS_AUTH_URL: "{{ .Values.certManagerDesignateWebhook.authUrl }}/v3"
         OS_APPLICATION_CREDENTIAL_ID: "{{ `{{ .applicationCredentialId }}` }}"
         OS_APPLICATION_CREDENTIAL_SECRET: "{{ `{{ .applicationCredentialSecret }}` }}"
   data:

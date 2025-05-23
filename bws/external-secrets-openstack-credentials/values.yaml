@@ -25,9 +25,9 @@ externalDns:
   cloudName: cloud
   authUrl: https://keystone.example.com:5000
 
-certManagerDns01Designate:
+certManagerDesignateWebhook:
   enabled: true
-  namespace: cert-manager-dns01-designate
+  namespace: cert-manager
   secretName: secret
   authUrl: https://keystone.example.com:5000
 
