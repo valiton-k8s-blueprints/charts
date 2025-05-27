@@ -1,0 +1,39 @@
+apiVersion: karpenter.sh/v1
+kind: NodePool
+metadata:
+  name: base
+spec:
+  template:
+    metadata:
+      labels:
+        type: karpenter
+        base_nodepool: base 
+    spec:
+      requirements:
+        - key: "kubernetes.io/arch"
+          operator: In
+          values: ["arm64"]
+        - key: karpenter.sh/capacity-type
+          operator: In
+          values: ["spot", "on-demand"]
+        - key: karpenter.sh/capacity-type
+          operator: In
+          values: ["spot", "on-demand"]
+        - key: "karpenter.k8s.aws/instance-cpu"
+          operator: In
+          values: ["2", "4"]
+        - key: "karpenter.k8s.aws/instance-memory"
+          operator: Gt
+          values: ["2000"]
+      nodeClassRef:
+        group: karpenter.k8s.aws
+        kind: EC2NodeClass
+        name: default-arm64
+      expireAfter: 720h
+  limits:
+    cpu: "128"
+    memory: 32Gi
+  disruption:
+    consolidationPolicy: WhenEmptyOrUnderutilized
+    consolidateAfter: 1m
+
