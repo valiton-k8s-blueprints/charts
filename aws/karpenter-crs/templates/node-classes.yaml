@@ -1,0 +1,45 @@
+apiVersion: karpenter.k8s.aws/v1
+kind: EC2NodeClass
+metadata:
+  name: "default-x86"
+spec:
+  amiFamily: AL2023
+  role: "karpenter-{{ .Values.karpenter.settings.clusterName }}" 
+  subnetSelectorTerms:
+    - tags:
+        karpenter.sh/discovery: {{ .Values.karpenter.settings.clusterName }}
+  
+  securityGroupSelectorTerms:
+    - tags:
+        karpenter.sh/discovery: {{ .Values.karpenter.settings.clusterName }}
+
+  amiSelectorTerms:
+    - id: {{ .Values.karpenter.settings.eks_image.x86_64 }}
+
+  tags:
+    Name: "{{ .Values.karpenter.settings.clusterName }}-karpenter-instance-x86"
+
+---
+
+apiVersion: karpenter.k8s.aws/v1
+kind: EC2NodeClass
+metadata:
+  name: "default-arm64"
+spec:
+  amiFamily: AL2023
+  role: "karpenter-{{ .Values.karpenter.settings.clusterName }}" 
+  subnetSelectorTerms:
+    - tags:
+        karpenter.sh/discovery: {{ .Values.karpenter.settings.clusterName }}
+  
+  securityGroupSelectorTerms:
+    - tags:
+        karpenter.sh/discovery: {{ .Values.karpenter.settings.clusterName }}
+
+  amiSelectorTerms:
+    - id: {{ .Values.karpenter.settings.eks_image.arm64 }}
+
+  tags:
+    Name: "{{ .Values.karpenter.settings.clusterName }}-karpenter-instance-arm64"
+
+
