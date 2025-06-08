@@ -9,9 +9,6 @@ clusterSecretStore:
     matchLabels:
       access-cluster-secrets: "true"
 
-externalSecrets:
-  enabled: true
-
 cinderCsiPlugin:
   enabled: true
   namespace: cinder-csi-plugin
