@@ -8,7 +8,7 @@ spec:
     email: {{.Values.acme.registrationEmail}}
     server: {{.Values.acme.url}}
     privateKeySecretRef:
-      name: letsencrypt-dns01-{{.Values.acme.name}}
+      name: letsencrypt-dns01
     solvers:
       - dns01:
 {{ toYaml .Values.acme.dns01.solver | indent 10 }}

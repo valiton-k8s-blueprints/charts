@@ -8,7 +8,7 @@ spec:
     server: {{.Values.acme.url}}
     email: {{.Values.acme.registrationEmail}}
     privateKeySecretRef:
-      name: letsencrypt-http01-{{.Values.acme.name}}
+      name: letsencrypt-http01
     solvers:
       - http01:
           ingress:
