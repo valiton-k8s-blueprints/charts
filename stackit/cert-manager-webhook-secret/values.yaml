@@ -1,0 +1,4 @@
+secret:
+  namespace: cert-manager
+  data:
+    service-account-token:
