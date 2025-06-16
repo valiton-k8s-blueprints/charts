@@ -9,3 +9,4 @@ acme:
         solverName: stackit
         config:
           authTokenSecretNamespace: cert-manager
+          projectId: test123-project
