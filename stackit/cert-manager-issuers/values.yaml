@@ -5,5 +5,7 @@ acme:
     enabled: true
     solver:
       webhook:
-        groupName: acme.syseleven.de
-        solverName: designatedns
+        groupName: acme.stackit.de
+        solverName: stackit
+        config:
+          authTokenSecretNamespace: cert-manager
