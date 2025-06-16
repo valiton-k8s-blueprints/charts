@@ -1,0 +1,4 @@
+stackit:
+  sm_user: stackit
+  sm_secret_name: stackit
+  sm_secret_namespace: stackit
