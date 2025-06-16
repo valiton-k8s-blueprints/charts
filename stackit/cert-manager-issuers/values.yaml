@@ -1,12 +1,12 @@
 acme:
-  url: https://acme-staging-v02.api.letsencrypt.org/directory
-  registrationEmail: test@example.com
+  url: undefined
+  registrationEmail: undefined
   dns01:
     enabled: true
     solver:
       webhook:
-        groupName: acme.stackit.de
-        solverName: stackit
+        groupName: undefined
+        solverName: undefined
         config:
-          authTokenSecretNamespace: cert-manager
-          projectId: test123-project
+          authTokenSecretNamespace: undefined
+          projectId: undefined
