@@ -1,0 +1,9 @@
+acme:
+  url: https://acme-staging-v02.api.letsencrypt.org/directory
+  registrationEmail: test@example.com
+  dns01:
+    enabled: true
+    solver:
+      webhook:
+        groupName: acme.syseleven.de
+        solverName: designatedns
