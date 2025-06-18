@@ -1,2 +1,3 @@
 secret:
   namespace: cert-manager
+  cert_manager_stackit_webhook_service_account_secret: stackit
