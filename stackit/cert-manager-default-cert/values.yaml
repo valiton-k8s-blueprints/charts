@@ -1,0 +1,6 @@
+certificate:
+  name: cert-manager-default-cert
+  namespace: cert-manager
+  secretName: cert-manager-default-cert-tls
+  renewBefore: 720h
+  dnsNames: ["test.example.com", "*.test.example.com"]

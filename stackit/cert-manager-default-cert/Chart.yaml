@@ -1,0 +1,5 @@
+apiVersion: v2
+name: Cert Manager default certificate
+description: Cert Manager default certificate
+type: application
+version: v0.1.0
