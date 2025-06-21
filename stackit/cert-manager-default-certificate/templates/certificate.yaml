@@ -10,4 +10,4 @@ spec:
     kind: Issuer
   renewBefore: {{ .Values.certificate.renewBefore }}
   dnsNames: 
-  {{ toYaml .Values.certificate.dnsNames | indent 2 }}
+    {{ .Values.certificate.dnsNames }}
