@@ -6,7 +6,7 @@ metadata:
 spec:
   secretName: {{ .Values.certificate.secretName }}
   issuerRef:
-    name: letsencrypt-prod
+    name: stackit-letsencrypt-dns01
     kind: Issuer
   renewBefore: {{ .Values.certificate.renewBefore }}
   dnsNames: {{ .Values.certificate.dnsNames }}

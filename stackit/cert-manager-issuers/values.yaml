@@ -1,0 +1,14 @@
+clusterIssuer:
+  default:
+    name: development-stackit-letsencrypt-dns01
+acme:
+  url: https://acme-staging-v02.api.letsencrypt.org/directory
+  registrationEmail: test@example.com
+  http01:
+    enabled: false
+  dns01:
+    enabled: true
+    solver:
+      webhook:
+        groupName: acme.stackit.de
+        solverName: stackit
