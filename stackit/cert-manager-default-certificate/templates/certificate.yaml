@@ -7,7 +7,7 @@ spec:
   secretName: {{ .Values.certificate.secretName }}
   issuerRef:
     name: {{ .Values.certificate.issuerRef.name }}
-    kind: Issuer
+    kind: ClusterIssuer
   renewBefore: {{ .Values.certificate.renewBefore }}
   dnsNames: 
   {{- range .Values.certificate.dnsNames }}
