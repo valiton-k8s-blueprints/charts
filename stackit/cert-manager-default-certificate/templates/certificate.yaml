@@ -1,4 +1,3 @@
-{{- $domains := fromJson .Values.certificate.dnsNames }}
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
@@ -11,6 +10,6 @@ spec:
     kind: Issuer
   renewBefore: {{ .Values.certificate.renewBefore }}
   dnsNames: 
-  {{- range $domains }}
+  {{- range .Values.certificate.dnsNames }}
     - {{ . | quote}}
   {{- end }}
