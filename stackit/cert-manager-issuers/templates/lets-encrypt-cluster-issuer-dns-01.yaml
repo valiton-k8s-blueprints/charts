@@ -8,7 +8,7 @@ spec:
     email: {{ .Values.acme.registrationEmail }}
     server: {{ .Values.acme.url }}
     privateKeySecretRef:
-      name: {{ .Values.clusterIssuer.default.name }}
+      name: {{ .Values.clusterIssuer.dns01.name }}
     solvers:
       - dns01:
 {{ toYaml .Values.acme.dns01.solver | indent 10 }}
