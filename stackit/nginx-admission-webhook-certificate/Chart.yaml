@@ -1,0 +1,5 @@
+apiVersion: v2
+name: NGINX Admission-webhook certificate
+description:  NGINX Admission-webhook certificate
+type: application
+version: v0.1.0
