@@ -5,8 +5,8 @@ metadata:
   name: letsencrypt-dns01
 spec:
   acme:
-    email: {{ .Values.acme.registrationEmail }}
-    server: {{ .Values.acme.url }}
+    email: {{.Values.acme.registrationEmail}}
+    server: {{.Values.acme.url}}
     privateKeySecretRef:
       name: letsencrypt-dns01
     solvers:
