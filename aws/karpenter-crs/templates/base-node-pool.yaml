@@ -25,6 +25,14 @@ spec:
         - key: "karpenter.k8s.aws/instance-memory"
           operator: Gt
           values: ["2000"]
+        - key: karpenter.k8s.aws/instance-cpu-manufacturer
+          operator: In
+          values:
+            - aws
+        - key: karpenter.k8s.aws/instance-generation
+          operator: Gt
+          values:
+            - '5' # skip A1 that is incompatible with AL2023
       nodeClassRef:
         group: karpenter.k8s.aws
         kind: EC2NodeClass

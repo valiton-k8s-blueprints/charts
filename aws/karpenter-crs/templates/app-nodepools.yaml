@@ -19,6 +19,14 @@ spec:
         - key: karpenter.sh/capacity-type
           operator: In
           values: ["spot", "on-demand"]
+        - key: karpenter.k8s.aws/instance-cpu-manufacturer
+          operator: In
+          values:
+            - aws
+        - key: karpenter.k8s.aws/instance-generation
+          operator: Gt
+          values:
+            - '5' # skip A1 that is incompatible with AL2023
       nodeClassRef:
         group: karpenter.k8s.aws
         kind: EC2NodeClass
@@ -54,6 +62,12 @@ spec:
         - key: karpenter.sh/capacity-type
           operator: In
           values: ["spot", "on-demand"]
+        - key: karpenter.k8s.aws/instance-cpu-manufacturer
+          operator: In
+          values: ["intel", "amd"]
+        - key: karpenter.k8s.aws/instance-generation
+          operator: Gt
+          values: ["5"]  # Skips old t2/m4/c4, ensures m5+, c5+, t3+, etc.
       nodeClassRef:
         group: karpenter.k8s.aws
         kind: EC2NodeClass
