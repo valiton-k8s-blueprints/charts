@@ -36,7 +36,11 @@ spec:
           ports:
             - containerPort: 8443
               hostPort: 8443
-      hostNetwork: true
+      tolerations:
+        - effect: NoSchedule
+          operator: Exists
+        - effect: NoExecute
+          operator: Exists
       volumes:
         - name: tls-secret
           secret:
