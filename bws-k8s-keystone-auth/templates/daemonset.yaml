@@ -41,12 +41,3 @@ spec:
         - name: tls-secret
           secret:
             secretName: k8s-keystone-tls-secret
-      nodeSelector:
-        node-role.kubernetes.io/control-plane: ""
-      tolerations:
-        - effect: NoSchedule
-          operator: Exists
-        - key: CriticalAddonsOnly
-          operator: Exists
-        - effect: NoExecute
-          operator: Exists
