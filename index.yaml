@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  cert-manager-acme-issuer:
+  - apiVersion: v2
+    created: "2026-03-18T12:13:17.058154258Z"
+    description: Cert manager Cluster Issuer for HTTPS-01 and DNS-01
+    digest: b0d7b71493b0badf5fb17e2cc9feebe9d44368bc61541e4cf2950cc48588b343
+    name: cert-manager-acme-issuer
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/cert-manager-acme-issuer-0.1.0/cert-manager-acme-issuer-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-03-18T12:13:17.058167924Z"
