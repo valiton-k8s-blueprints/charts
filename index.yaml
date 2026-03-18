@@ -1,5 +1,45 @@
 apiVersion: v1
 entries:
+  aws-external-secrets-crs:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:51.267902834Z"
+    description: External Secrets custom resources for AWS
+    digest: 7bde9c6af0f7e1386df54f3b0ced4c3bb44ca59a2af8016e86664ddd633d7543
+    name: aws-external-secrets-crs
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/aws-external-secrets-crs-0.1.0/aws-external-secrets-crs-0.1.0.tgz
+    version: 0.1.0
+  aws-karpenter-crs:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:51.557376203Z"
+    description: Karpenter custom resources
+    digest: 70d3985aae8ac15349b0f140d9d0bea8d2f89cb735ee48c036e009cc6147c2b6
+    name: aws-karpenter-crs
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/aws-karpenter-crs-0.1.1/aws-karpenter-crs-0.1.1.tgz
+    version: 0.1.1
+  bws-external-secrets-openstack-credentials:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:51.860464597Z"
+    description: External Secrets with ClusterSecretStore for Openstack Credentials
+    digest: 94598107a596b29c96c1ad90b9a158ea98532c357c9f215a52997b3f51ea7aef
+    name: bws-external-secrets-openstack-credentials
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-external-secrets-openstack-credentials-0.1.0/bws-external-secrets-openstack-credentials-0.1.0.tgz
+    version: 0.1.0
+  bws-k8s-keystone-auth:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:52.104293264Z"
+    description: Keystone Authentication for Kubernetes
+    digest: a04abd606e4ada2851fdf89a5faf956a8fb8d03e01930bfd8816fe240b6ac5b8
+    name: bws-k8s-keystone-auth
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-k8s-keystone-auth-0.1.0/bws-k8s-keystone-auth-0.1.0.tgz
+    version: 0.1.0
   cert-manager-acme-issuer:
   - apiVersion: v2
     created: "2026-03-18T12:13:17.058154258Z"
@@ -10,4 +50,64 @@ entries:
     urls:
     - https://github.com/valiton-k8s-blueprints/charts/releases/download/cert-manager-acme-issuer-0.1.0/cert-manager-acme-issuer-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-18T12:13:17.058167924Z"
+  stackit-cert-manager-crds:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:52.812862104Z"
+    description: STACKIT Cert Manager Webhook Secret
+    digest: ecc8ad3dd5c8160b1b881e55c499a947e2cb99728a820fff4ede4960ff5a8763
+    name: stackit-cert-manager-crds
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-cert-manager-crds-0.1.0/stackit-cert-manager-crds-0.1.0.tgz
+    version: 0.1.0
+  stackit-cert-manager-default-certificate:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:53.066676776Z"
+    description: Cert Manager default certificate
+    digest: 863c34fb7a002b674b434c44914c0afb584cd486c87332f8bf789b24f993ff45
+    name: stackit-cert-manager-default-certificate
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-cert-manager-default-certificate-0.1.0/stackit-cert-manager-default-certificate-0.1.0.tgz
+    version: 0.1.0
+  stackit-cert-manager-issuers:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:53.344277926Z"
+    description: Cert manager Cluster Issuer for HTTPS-01 and DNS-01
+    digest: 2e9099e8724776ebc4fa68b19b1f215d977588d5ef8142921c3f35f542db34e4
+    name: stackit-cert-manager-issuers
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-cert-manager-issuers-0.1.0/stackit-cert-manager-issuers-0.1.0.tgz
+    version: 0.1.0
+  stackit-cert-manager-webhook-secret:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:53.555996217Z"
+    description: Cert Manager CustomResourceDefinition resources
+    digest: 63a3dc2b69fb010ea86806173747f47f8752bed951ffd628125445c7b46106fa
+    name: stackit-cert-manager-webhook-secret
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-cert-manager-webhook-secret-0.1.0/stackit-cert-manager-webhook-secret-0.1.0.tgz
+    version: 0.1.0
+  stackit-external-secrets-crs:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:53.812726326Z"
+    description: External Secrets custom resources for STACKIT
+    digest: 3d96ece0ef289bc8cda755a63f854fb63501dbb790cd76a682f4366376f26687
+    name: stackit-external-secrets-crs
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-external-secrets-crs-0.1.0/stackit-external-secrets-crs-0.1.0.tgz
+    version: 0.1.0
+  stackit-nginx-admission-webhook-certificate:
+  - apiVersion: v2
+    created: "2026-03-18T14:56:54.045243562Z"
+    description: NGINX Admission-webhook certificate
+    digest: 19269c96ef88ff0a982bea42c9876743b72549e3400e5f1abdade24dbc8cd376
+    name: stackit-nginx-admission-webhook-certificate
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-nginx-admission-webhook-certificate-0.1.0/stackit-nginx-admission-webhook-certificate-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-03-18T14:56:54.045264531Z"
