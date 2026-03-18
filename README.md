@@ -16,7 +16,9 @@ Helm's [documentation](https://helm.sh/docs) to get started.
 
 Once Helm has been set up correctly, add the repo as follows:
 
-    helm repo add blueprint-charts valiton-k8s-blueprints.github.io/charts
+```shell
+helm repo add blueprint-charts https://valiton-k8s-blueprints.github.io/charts
+```
 
 If you had already added this repo earlier, run `helm repo update` to retrieve
 the latest versions of the packages.  You can then run `helm search repo
