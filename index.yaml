@@ -22,6 +22,15 @@ entries:
     version: 0.1.1
   bws-external-secrets-openstack-credentials:
   - apiVersion: v2
+    created: "2026-03-28T14:14:48.306088929Z"
+    description: External Secrets with ClusterSecretStore for Openstack Credentials
+    digest: de25a471800711ad60689b94411e4ffd79130d7e0fe30f0511c44851e1a63f40
+    name: bws-external-secrets-openstack-credentials
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-external-secrets-openstack-credentials-0.1.1/bws-external-secrets-openstack-credentials-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2026-03-18T14:56:51.860464597Z"
     description: External Secrets with ClusterSecretStore for Openstack Credentials
     digest: 94598107a596b29c96c1ad90b9a158ea98532c357c9f215a52997b3f51ea7aef
@@ -110,4 +119,4 @@ entries:
     urls:
     - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-nginx-admission-webhook-certificate-0.1.0/stackit-nginx-admission-webhook-certificate-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-18T14:56:54.045264531Z"
+generated: "2026-03-28T14:14:49.331836725Z"
