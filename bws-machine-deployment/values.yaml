@@ -1,0 +1,22 @@
+name: pool1
+namespace: kube-system
+
+machine:
+  minSize: 1
+  maxSize: 3
+  revision: 1
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 1
+
+openstack:
+  availabilityZone: az1
+  flavor: BWS-T1-2-4
+  image: Talos
+  network: private-network
+  rootDiskSizeGB: 40
+  securityGroups:
+    - allow-internal
+    - external
+  subnet: private-network-subnet

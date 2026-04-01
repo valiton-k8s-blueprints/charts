@@ -1,0 +1,25 @@
+---
+apiVersion: external-secrets.io/v1
+kind: ExternalSecret
+metadata:
+  name: {{ .Values.name }}-{{ .Values.namespace }}-bootstrap-config
+  namespace: cloud-init-settings
+spec:
+  refreshInterval: 1h
+  secretStoreRef:
+    kind: ClusterSecretStore
+    name: cluster-secrets
+  target:
+    name: {{ .Values.name }}-{{ .Values.namespace }}-bootstrap-config
+    template:
+      metadata:
+        annotations:
+          k8c.io/machine-deployment-revision: "{{ .Values.machine.revision }}"
+      engineVersion: v2
+      data:
+        cloud-config: {{ `{{ .cloudInit  }}` }}
+  data:
+    - secretKey: cloudInit
+      remoteRef:
+        key: cluster-secrets
+        property: dynamic_worker_cloud_init
