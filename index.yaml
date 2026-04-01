@@ -49,6 +49,16 @@ entries:
     urls:
     - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-k8s-keystone-auth-0.1.0/bws-k8s-keystone-auth-0.1.0.tgz
     version: 0.1.0
+  bws-machine-deployment:
+  - apiVersion: v2
+    created: "2026-04-01T09:46:27.049032182Z"
+    description: Deploys a machine deployment for dynamic workers
+    digest: bb21377a8de2956ad7612622b25c5a6c75a197c036211074a331283659c43b8b
+    name: bws-machine-deployment
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-machine-deployment-0.1.0/bws-machine-deployment-0.1.0.tgz
+    version: 0.1.0
   bws-machine-depoyment:
   - apiVersion: v2
     created: "2026-03-31T14:40:03.656380115Z"
@@ -129,4 +139,4 @@ entries:
     urls:
     - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-nginx-admission-webhook-certificate-0.1.0/stackit-nginx-admission-webhook-certificate-0.1.0.tgz
     version: 0.1.0
-generated: "2026-03-31T14:40:05.273672729Z"
+generated: "2026-04-01T09:46:28.188138462Z"
