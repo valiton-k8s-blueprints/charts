@@ -17,7 +17,8 @@ spec:
           k8c.io/machine-deployment-revision: "{{ .Values.machine.revision }}"
       engineVersion: v2
       data:
-        cloud-config: {{ `{{ .cloudInit  }}` }}
+        cloud-config: |-
+          {{ `{{ .cloudInit }}` }}
   data:
     - secretKey: cloudInit
       remoteRef:
