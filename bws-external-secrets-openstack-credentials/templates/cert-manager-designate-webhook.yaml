@@ -1,0 +1,45 @@
+{{ if .Values.certManagerDesignateWebhook.enabled }}
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: {{ .Values.certManagerDesignateWebhook.namespace }}
+  labels:
+    {{- range $k, $v := .Values.clusterSecretStore.namespaces.matchLabels }}
+      {{ $k }}: "{{ $v }}"
+    {{- end }}
+---
+apiVersion: external-secrets.io/v1
+kind: ExternalSecret
+metadata:
+  name: {{ .Values.certManagerDesignateWebhook.secretName }}
+  namespace: {{ .Values.certManagerDesignateWebhook.namespace }}
+spec:
+  refreshInterval: 1h
+  secretStoreRef:
+    kind: ClusterSecretStore
+    name: {{ .Values.clusterSecretStore.name }}
+  target:
+    name: {{ .Values.certManagerDesignateWebhook.secretName }}
+    template:
+      engineVersion: v2
+      data:
+        OS_AUTH_URL: "{{ .Values.certManagerDesignateWebhook.authUrl }}/v3"
+        OS_APPLICATION_CREDENTIAL_ID: "{{ `{{ .applicationCredentialId }}` }}"
+        OS_APPLICATION_CREDENTIAL_SECRET: "{{ `{{ .applicationCredentialSecret }}` }}"
+  data:
+    - secretKey: applicationCredentialId
+      remoteRef:
+        key: {{ .Values.clusterSecrets.name }}
+        property: application_credential_id
+        conversionStrategy: Default
+        decodingStrategy: None
+        metadataPolicy: None
+    - secretKey: applicationCredentialSecret
+      remoteRef:
+        key: {{ .Values.clusterSecrets.name }}
+        property: application_credential_secret
+        conversionStrategy: Default
+        decodingStrategy: None
+        metadataPolicy: None
+{{ end }}
