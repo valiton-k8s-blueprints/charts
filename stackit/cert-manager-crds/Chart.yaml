@@ -1,5 +1,0 @@
-apiVersion: v2
-name: STACKIT Cert Manager Webhook Secret
-description: STACKIT Cert Manager Webhook Secret
-type: application
-version: 0.1.0
