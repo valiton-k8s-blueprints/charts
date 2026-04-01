@@ -51,6 +51,15 @@ entries:
     version: 0.1.0
   bws-machine-deployment:
   - apiVersion: v2
+    created: "2026-04-01T10:35:36.480493468Z"
+    description: Deploys a machine deployment for dynamic workers
+    digest: f10a88a8838ac75b08a5327000246757ab7b3b19613ad19311172f74aac74338
+    name: bws-machine-deployment
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-machine-deployment-0.1.3/bws-machine-deployment-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     created: "2026-04-01T10:24:10.462008958Z"
     description: Deploys a machine deployment for dynamic workers
     digest: 442afab7fff8b7d19fe21f35f41d25394736e4561e19fb96980c253f6ef57986
@@ -147,4 +156,4 @@ entries:
     urls:
     - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-nginx-admission-webhook-certificate-0.1.0/stackit-nginx-admission-webhook-certificate-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-01T10:24:11.813462309Z"
+generated: "2026-04-01T10:35:37.56916638Z"
