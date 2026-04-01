@@ -1,0 +1,51 @@
+---
+apiVersion: cluster.k8s.io/v1alpha1
+kind: MachineDeployment
+metadata:
+  annotations:
+    cluster.k8s.io/cluster-api-autoscaler-node-group-max-size: "{{ .Values.machine.maxSize }}"
+    cluster.k8s.io/cluster-api-autoscaler-node-group-min-size: "{{ .Values.machine.minSize }}"
+    machinedeployment.clusters.k8s.io/revision: "{{ .Values.machine.revision }}"
+  finalizers:
+    - foregroundDeletion
+  name: {{ .Values.name }}
+  namespace: {{ .Values.namespace }}
+spec:
+  minReadySeconds: {{ .Values.machine.minReadySeconds }}
+  progressDeadlineSeconds: {{ .Values.machine.progressDeadlineSeconds }}
+  revisionHistoryLimit: {{ .Values.machine.revisionHistoryLimit }}
+  selector:
+    matchLabels:
+      workerset: {{ .Values.name }}
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        workerset: {{ .Values.name }}
+      namespace: {{ .Values.namespace }}
+    spec:
+      metadata:
+        labels:
+          workerset: {{ .Values.name }}
+      providerSpec:
+        value:
+          cloudProvider: openstack
+          cloudProviderSpec:
+            availabilityZone: {{ .Values.openstack.availabilityZone }}
+            configDrive: false
+            flavor: {{ .Values.openstack.flavor }}
+            image: {{ .Values.openstack.image }}
+            network: {{ .Values.openstack.network }}
+            rootDiskSizeGB: {{ .Values.openstack.rootDiskSizeGB }}
+            securityGroups:
+              {{- range .Values.openstack.securityGroups }}
+              - {{ . -}}
+              {{ end }}
+            subnet: {{ .Values.openstack.subnet }}
+          operatingSystem: ubuntu
+      versions:
+        kubelet: 1.34.5
