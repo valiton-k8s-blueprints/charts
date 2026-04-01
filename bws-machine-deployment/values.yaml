@@ -7,7 +7,6 @@ machine:
   revision: 1
   minReadySeconds: 0
   progressDeadlineSeconds: 600
-  replicas: 1
   revisionHistoryLimit: 1
 
 openstack:

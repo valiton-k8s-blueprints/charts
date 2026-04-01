@@ -13,7 +13,6 @@ metadata:
 spec:
   minReadySeconds: {{ .Values.machine.minReadySeconds }}
   progressDeadlineSeconds: {{ .Values.machine.progressDeadlineSeconds }}
-  replicas: {{ .Values.machine.replicas }}
   revisionHistoryLimit: {{ .Values.machine.revisionHistoryLimit }}
   selector:
     matchLabels:
