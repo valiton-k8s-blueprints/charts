@@ -68,16 +68,6 @@ entries:
     urls:
     - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-machine-deployment-0.1.0/bws-machine-deployment-0.1.0.tgz
     version: 0.1.0
-  bws-machine-depoyment:
-  - apiVersion: v2
-    created: "2026-03-31T14:40:03.656380115Z"
-    description: Deploys a machine deployment for dynamic workers
-    digest: 3c44f4cc5d8252e091d35ae6fde6dd4229a08f69bc6616b9b4b2a368f87f332f
-    name: bws-machine-depoyment
-    type: application
-    urls:
-    - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-machine-depoyment-0.1.0/bws-machine-depoyment-0.1.0.tgz
-    version: 0.1.0
   cert-manager-acme-issuer:
   - apiVersion: v2
     created: "2026-03-18T12:13:17.058154258Z"
