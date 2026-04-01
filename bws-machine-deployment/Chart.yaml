@@ -1,5 +1,5 @@
 apiVersion: v2
-name: bws-machine-depoyment
+name: bws-machine-deployment
 description: Deploys a machine deployment for dynamic workers
 
 # A chart can be either an 'application' or a 'library' chart.
