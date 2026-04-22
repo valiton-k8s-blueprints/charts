@@ -22,6 +22,15 @@ entries:
     version: 0.1.1
   bws-external-secrets-openstack-credentials:
   - apiVersion: v2
+    created: "2026-04-22T13:47:36.505108515Z"
+    description: External Secrets with ClusterSecretStore for Openstack Credentials
+    digest: 506079d77d0c670a1dc2344efdf752e33c8035a7fdccbbde55ac25b2d1947d8d
+    name: bws-external-secrets-openstack-credentials
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-external-secrets-openstack-credentials-0.1.2/bws-external-secrets-openstack-credentials-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2026-03-28T14:14:48.306088929Z"
     description: External Secrets with ClusterSecretStore for Openstack Credentials
     digest: de25a471800711ad60689b94411e4ffd79130d7e0fe30f0511c44851e1a63f40
@@ -40,6 +49,15 @@ entries:
     - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-external-secrets-openstack-credentials-0.1.0/bws-external-secrets-openstack-credentials-0.1.0.tgz
     version: 0.1.0
   bws-k8s-keystone-auth:
+  - apiVersion: v2
+    created: "2026-04-22T13:47:36.763232364Z"
+    description: Keystone Authentication for Kubernetes
+    digest: 8a556f2159f24a5e74c70340f7895a06cda81219555708cee9532ecb82196eb8
+    name: bws-k8s-keystone-auth
+    type: application
+    urls:
+    - https://github.com/valiton-k8s-blueprints/charts/releases/download/bws-k8s-keystone-auth-0.1.1/bws-k8s-keystone-auth-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v2
     created: "2026-03-18T14:56:52.104293264Z"
     description: Keystone Authentication for Kubernetes
@@ -165,4 +183,4 @@ entries:
     urls:
     - https://github.com/valiton-k8s-blueprints/charts/releases/download/stackit-nginx-admission-webhook-certificate-0.1.0/stackit-nginx-admission-webhook-certificate-0.1.0.tgz
     version: 0.1.0
-generated: "2026-04-01T15:23:00.378084296Z"
+generated: "2026-04-22T13:47:38.891764224Z"
