@@ -29,6 +29,7 @@ certManagerDesignateWebhook:
   authUrl: https://keystone.example.com:5000
 
 openstackCloudControllerManager:
+  enabled: true
   authUrl: https://keystone.example.com:5000
   loadBalancer:
     subnetId: 1234
