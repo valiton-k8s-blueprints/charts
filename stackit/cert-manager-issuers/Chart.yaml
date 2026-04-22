@@ -1,5 +1,0 @@
-apiVersion: v2
-name: Cert Managers ACME issuer
-description: Cert manager Cluster Issuer for HTTPS-01 and DNS-01
-type: application
-version: 0.1.0
