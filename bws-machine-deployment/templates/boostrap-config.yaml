@@ -4,4 +4,6 @@ kind: BootstrapConfig
 metadata:
   name: {{ .Values.name }}-{{ .Values.namespace }}-bootstrap-config
 spec:
-  name: {{ .Values.name }}-{{ .Values.namespace }}-bootstrap-config
+  machineDeployment:
+    name: {{ .Values.name }}
+    namespace: {{ .Values.namespace }}
