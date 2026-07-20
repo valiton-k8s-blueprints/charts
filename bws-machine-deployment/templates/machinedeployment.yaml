@@ -47,5 +47,3 @@ spec:
               {{ end }}
             subnet: {{ .Values.openstack.subnet }}
           operatingSystem: ubuntu
-      versions:
-        kubelet: 1.34.5
